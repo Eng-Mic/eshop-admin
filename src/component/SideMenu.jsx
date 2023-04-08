@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactShadowScroll from 'react-shadow-scroll';
 import { GrOverview } from 'react-icons/gr'
 import { HiOutlineUsers } from 'react-icons/hi'
 import { SiHomeassistantcommunitystore } from 'react-icons/si'
@@ -12,7 +13,7 @@ import { HiOutlineLogout } from 'react-icons/hi'
 
 const SideMenu = () => {
     return (
-        <div className='bg-lighterBlue pt-6 pb-10 shadow-sm '>
+        <div className='bg-lighterBlue pt-6 pb-10 shadow-sm'>
             <div className="current_admin flex items-center gap-2 mb-4 px-4">
                 <div className="admin_img w-[2rem] border-2 rounded-full p-[2px]">
                     <img src="/assets/user.png" alt="" />
@@ -30,7 +31,7 @@ const SideMenu = () => {
                 </div>
                 
             </div>
-            <div className="menus my-5">
+            <div className="menus my-5 h-[66vh] overflow-auto scrollbar scrollbar-w-[3px] scrollbar-thumb-[#3e98c7] scrollbar-track-zinc-400 scroll-smooth">
                 <ul>
                     <p className='flex items-center gap-1 text-[10.5px] font-medium text-zinc-400 mt-6 mb-2 px-5 uppercase'>
                         <TbLayoutDashboard />

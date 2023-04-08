@@ -8,3 +8,7 @@
 body {
     background-color: #FAFAFA;
 }
+
+.menus {
+    scrollbar-width: thin;
+}

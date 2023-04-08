@@ -4,6 +4,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     screens: {
@@ -26,6 +27,9 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin'),
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 }
 
