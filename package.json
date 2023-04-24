@@ -9,12 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "flowbite": "^1.6.4",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.12.0",
+    "@mui/x-data-grid": "^6.2.0",
+    "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.3",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-quill": "^2.0.0",
     "react-router-dom": "^6.10.0",
     "recharts": "^2.5.0",
     "tailwind-scrollbar": "^3.0.0"

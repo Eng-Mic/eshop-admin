@@ -40,7 +40,7 @@ export const Home = () => {
                     </div> |
                     <p>Dashboard</p>
                 </div>
-                <div className="flex justify-between items-end my-4">
+                <div className="flex justify-between items-end my-4 flex-col md:flex-row">
                     <div className="left">
                         <h2 className='text-[18px] font-semibold uppercase'>Dashboard</h2>
                         <p className='text-[10px] font-medium'>Welcome back, Michael</p>
@@ -56,37 +56,43 @@ export const Home = () => {
                 </div>
             </div>
             {/* Stats */}
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
                 {/* Users */}
-                <div className="users flex items-center justify-between bg-white py-5 px-6 rounded-md shadow-sm">
+                <div className="users flex items-center justify-between bg-white py-2 px-2 rounded-md shadow-sm md:py-5 md:px-6">
                     <div className="">
-                        <h2 className='text-[18px] font-semibold leading-3'>100</h2>
+                        <h2 className='text-[18px] font-semibold leading-3 flex items-center gap-2 py-1 md:py-0'>
+                            <HiOutlineUsers className='text-[20px] md:hidden' />
+                            100
+                        </h2>
                         <p className='text-[10px] font-medium uppercase mt-[2px]'>Total Customers</p>
-                        <p className='text-[10px] text-zinc-300 mt-[3px] flex items-center gap-2'>
-                            <span className='text-green-500 font-semibold text-[11px] flex items-center gap-1'>
+                        <p className='text-[9px] text-zinc-400 mt-[3px] flex  items-center gap-2 py-1 md:flex-row md:text-[10px] md:py-0'>
+                            <span className='text-green-500 font-semibold text-[9px] flex items-center gap-1 md:text-[11px]'>
                                 <BsGraphUpArrow className='text-green-500 font-bold' />
                                 9.0%
                             </span>
                             since last month
                         </p>
                     </div>
-                    <HiOutlineUsers className='text-[25px]' />
+                    <HiOutlineUsers className='hidden text-[25px] md:block' />
                 </div>
 
                 {/* Stores */}
-                <div className="stores flex items-center justify-between bg-white py-5 px-6 rounded-md shadow-sm">
+                <div className="stores flex items-center justify-between bg-white py-2 px-2 rounded-md shadow-sm md:py-5 md:px-6">
                     <div className="">
-                        <h2 className='text-[18px] font-semibold leading-3'>100</h2>
+                        <h2 className='text-[18px] font-semibold leading-3 flex items-center gap-2 py-1 md:py-0'>
+                            <SiHomeassistantcommunitystore className='text-[18px] md:hidden' />
+                            100
+                        </h2>
                         <p className='text-[10px] font-medium uppercase mt-[2px]'>Total Stores</p>
-                        <p className='text-[10px] text-zinc-300 mt-[3px] flex items-center gap-2'>
-                            <span className='text-green-500 font-semibold text-[11px] flex items-center gap-1'>
+                        <p className='text-[9px] text-zinc-300 mt-[3px] flex items-center gap-2 py-1 md:flex-row md:text-[10px] md:py-0'>
+                            <span className='text-green-500 font-semibold text-[9px] flex items-center gap-1 md:text-[11px]'>
                                 <BsGraphUpArrow className='text-green-500 font-bold' />
                                 9.0%
                             </span>
                             since last month
                         </p>
                     </div>
-                    <SiHomeassistantcommunitystore className='text-[22px]' />
+                    <SiHomeassistantcommunitystore className='hidden text-[22px] md:block' />
                 </div>
 
                 {/* Orders */}
@@ -344,7 +350,7 @@ export const Home = () => {
                             {/* Single Store */}
                             <div className="store flex items-center justify-between my-3">
                                 <div className="left flex items-center gap-2">
-                                    <div className="store_img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="store_img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/vendor.png" alt="" />
                                     </div>
                                     <div className="">
@@ -366,7 +372,7 @@ export const Home = () => {
                             {/* Single Store */}
                             <div className="store flex items-center justify-between my-3">
                                 <div className="left flex items-center gap-2">
-                                    <div className="store_img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="store_img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/vendor.png" alt="" />
                                     </div>
                                     <div className="">
@@ -388,7 +394,7 @@ export const Home = () => {
                             {/* Single Store */}
                             <div className="store flex items-center justify-between my-3">
                                 <div className="left flex items-center gap-2">
-                                    <div className="store_img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="store_img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/vendor.png" alt="" />
                                     </div>
                                     <div className="">
@@ -421,7 +427,7 @@ export const Home = () => {
                             {/* Single Product */}
                             <div className="product flex justify-between items-center my-3">
                                 <div className="left flex gap-3 items-center">
-                                    <div className="img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/pp3.png" alt="" />
                                     </div>
                                     <div className="">
@@ -445,7 +451,7 @@ export const Home = () => {
                             {/* Single Product */}
                             <div className="product flex justify-between items-center my-3">
                                 <div className="left flex gap-3 items-center">
-                                    <div className="img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/pp3.png" alt="" />
                                     </div>
                                     <div className="">
@@ -469,7 +475,7 @@ export const Home = () => {
                             {/* Single Product */}
                             <div className="product flex justify-between items-center my-3">
                                 <div className="left flex gap-3 items-center">
-                                    <div className="img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/pp3.png" alt="" />
                                     </div>
                                     <div className="">
@@ -522,7 +528,7 @@ export const Home = () => {
                                 {/* Request Content */}
                                 <div className="left flex items-center gap-2">
                                     {/* Content Image */}
-                                    <div className="img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/vendor.png" alt="" />
                                     </div>
                                     {/* Content Text */}
@@ -543,7 +549,7 @@ export const Home = () => {
                                 {/* Request Content */}
                                 <div className="left flex items-center gap-2">
                                     {/* Content Image */}
-                                    <div className="img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/vendor.png" alt="" />
                                     </div>
                                     {/* Content Text */}
@@ -564,7 +570,7 @@ export const Home = () => {
                                 {/* Request Content */}
                                 <div className="left flex items-center gap-2">
                                     {/* Content Image */}
-                                    <div className="img w-[3rem] bg-zinc-200 rounded-md p-[2px]">
+                                    <div className="img w-[2.5rem] bg-zinc-200 rounded-md p-[2px]">
                                         <img src="/assets/vendor.png" alt="" />
                                     </div>
                                     {/* Content Text */}

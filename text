@@ -1,0 +1,179 @@
+ {/* Table */}
+                        <table className="w-full text-[11px] text-left text-gray-500 dark:text-gray-400 rounded-md">
+                            {/* Table Head */}
+                            <thead className="text-[11px] text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+                                <tr className='rounded-md'>
+                                    <th scope="col" className="px-6 py-3">
+                                        Customer ID
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        Name
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        Email
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        Address
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        Status
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        
+                                    </th>
+                                </tr>
+                            </thead>
+                            {/* Table Body */}
+                            <tbody className='text-[12px]'>
+                                {/* Single User */}
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        12345678910...
+                                    </th>
+                                    <td className="flex items-center gap-2 px-6 py-4">
+                                        <div className="img w-[2rem] bg-slate-200 p-[2px] rounded-md">
+                                            <img src="/assets/user.png" alt="" />
+                                        </div>
+                                        Michael L Bangura
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        michlawbang123@gmail.com
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Mama Beach Village
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Admin
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        <BsThreeDotsVertical className='text-[18px]' />
+                                    </td>
+                                </tr>
+
+                                {/* Single User */}
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        12345678910...
+                                    </th>
+                                    <td className="flex items-center gap-2 px-6 py-4">
+                                        <div className="img w-[2rem] bg-slate-200 p-[2px] rounded-md">
+                                            <img src="/assets/user.png" alt="" />
+                                        </div>
+                                        Michael L Bangura
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        michlawbang123@gmail.com
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Mama Beach Village
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Admin
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        <BsThreeDotsVertical className='text-[18px]' />
+                                    </td>
+                                </tr>
+
+                                {/* Single User */}
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        12345678910...
+                                    </th>
+                                    <td className="flex items-center gap-2 px-6 py-4">
+                                        <div className="img w-[2rem] bg-slate-200 p-[2px] rounded-md">
+                                            <img src="/assets/user.png" alt="" />
+                                        </div>
+                                        Michael L Bangura
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        michlawbang123@gmail.com
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Mama Beach Village
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Admin
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        <BsThreeDotsVertical className='text-[18px]' />
+                                    </td>
+                                </tr>
+
+                                {/* Single User */}
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        12345678910...
+                                    </th>
+                                    <td className="flex items-center gap-2 px-6 py-4">
+                                        <div className="img w-[2rem] bg-slate-200 p-[2px] rounded-md">
+                                            <img src="/assets/user.png" alt="" />
+                                        </div>
+                                        Michael L Bangura
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        michlawbang123@gmail.com
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Mama Beach Village
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Admin
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        <BsThreeDotsVertical className='text-[18px]' />
+                                    </td>
+                                </tr>
+
+                                {/* Single User */}
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        12345678910...
+                                    </th>
+                                    <td className="flex items-center gap-2 px-6 py-4">
+                                        <div className="img w-[2rem] bg-slate-200 p-[2px] rounded-md">
+                                            <img src="/assets/user.png" alt="" />
+                                        </div>
+                                        Michael L Bangura
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        michlawbang123@gmail.com
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Mama Beach Village
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Admin
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        <BsThreeDotsVertical className='text-[18px]' />
+                                    </td>
+                                </tr>
+
+                                {/* Single User */}
+                                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        12345678910...
+                                    </th>
+                                    <td className="flex items-center gap-2 px-6 py-4">
+                                        <div className="img w-[2rem] bg-slate-200 p-[2px] rounded-md">
+                                            <img src="/assets/user.png" alt="" />
+                                        </div>
+                                        Michael L Bangura
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        michlawbang123@gmail.com
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Mama Beach Village
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        Admin
+                                    </td>
+                                    <td className="px-6 py-4">
+                                        <BsThreeDotsVertical className='text-[18px]' />
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
