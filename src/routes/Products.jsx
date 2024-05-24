@@ -1,28 +1,9 @@
 import React, { useState } from 'react'
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
-
 import { BsFillGridFill, BsThreeDotsVertical } from 'react-icons/bs';
 import { FaRegImages } from 'react-icons/fa';
 import { FiHome } from 'react-icons/fi';
 import { GoThreeBars } from 'react-icons/go'
 import { GrFormNext } from 'react-icons/gr';
-
-const modules = {
-    toolbar: [
-        [{ header: [1, 2, 3, 4, 5, false] }],
-        [{ font: [] }],
-        [{ size: [] }],
-        ["bold", "italic", "underline", "strike", "blockquote"],
-        [
-            { list: "ordered" },
-            { list: "bullet" },
-            // { indent: "-1" },
-            // { indent: "+1" }
-        ],
-        ["link"]
-    ]
-}
 
 export const Products = () => {
     const [newProduct, setNewProduct] = useState(false);
@@ -56,9 +37,6 @@ export const Products = () => {
             {/* Products Container */}
             <div className="products_container">
                 <div className="relative overflow-x-auto">
-                    {/* Table Display */}
-
-
                     {/* Grid Display */}
                     <div className="grid_display grid grid-cols-5 gap-3 mb-5">
                         {/* Single Product */}
@@ -70,244 +48,25 @@ export const Products = () => {
                                 <img src="/assets/p12.png" alt="" />
                             </div>
                             <div className="text_content my-2 px-2 cursor-pointer">
+                                <p className='text-[11px]'>
+                                    storeName
+                                </p>
                                 {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
+                                <h2 className='text-[13px] font-medium my-1'>
                                     Cannon High Res Black Camera
                                 </h2>
                                 {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Single Product */}
-                        <div className="product bg-white p-[3px] rounded-md relative">
-                            {/* Product Actions Button */}
-                            <BsThreeDotsVertical className='absolute top-3 right-2 cursor-pointer' />
-                            {/* Product Image */}
-                            <div className="img w-[100%] bg-gray-200 rounded-md">
-                                <img src="/assets/p12.png" alt="" />
-                            </div>
-                            <div className="text_content my-2 px-2 cursor-pointer">
-                                {/* Product Name */}
-                                <h2 className='text-[12px] font-medium my-1'>
-                                    Cannon High Res Black Camera
-                                </h2>
-                                {/* Product Price */}
-                                <div className="price flex items-center gap-2">
-                                    <h2 className='text-[11px] font-medium'>Price : </h2>
-                                    <p className='text-[11px] font-medium'>$100</p>
+                                <div className="price flex items-center justify-between">
+                                    <p className='text-[11px] font-medium flex items-center gap-x-[5px]'>
+                                        Price :
+                                        <span>
+                                            $100
+                                        </span>
+                                    </p>
+                                    <p className='text-[11px] font-medium flex items-center gap-x-[5px]'>
+                                        In-stock :
+                                        <span>10</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>

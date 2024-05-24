@@ -9,20 +9,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@mui/material": "^5.12.0",
-    "@mui/x-data-grid": "^6.2.0",
-    "flowbite": "^1.6.5",
-    "flowbite-react": "^0.4.3",
+    "@cloudinary/react": "^1.13.0",
+    "@cloudinary/url-gen": "^1.19.0",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "formik": "^2.4.6",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-quill": "^2.0.0",
     "react-router-dom": "^6.10.0",
     "recharts": "^2.5.0",
-    "tailwind-scrollbar": "^3.0.0"
+    "tailwind-scrollbar": "^3.0.0",
+    "yup": "^1.4.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
