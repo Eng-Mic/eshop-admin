@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BsFillGridFill, BsThreeDotsVertical } from 'react-icons/bs';
 import { FaRegImages } from 'react-icons/fa';
 import { FiHome } from 'react-icons/fi';
-import { GoThreeBars } from 'react-icons/go'
+// import { GoThreeBars } from 'react-icons/go'
 import { GrFormNext } from 'react-icons/gr';
 
 export const Products = () => {
@@ -29,7 +29,7 @@ export const Products = () => {
                 {/* Grid Display and Add New Product Button */}
                 <div className="grid_display_add_new_customer_button flex items-center gap-2">
                     <BsFillGridFill />
-                    <GoThreeBars />
+                    {/* <GoThreeBars /> */}
                     {/* Add New Product | Product Button */}
                     <BsThreeDotsVertical />
                 </div>

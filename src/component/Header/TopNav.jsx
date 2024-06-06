@@ -10,7 +10,7 @@ import { GrOverview } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 import { FiUser } from 'react-icons/fi';
 import { IoMdArrowDropdown, IoMdNotifications, IoMdSettings } from 'react-icons/io'
-import { GoPrimitiveDot } from 'react-icons/go';
+// import { GoPrimitiveDot } from 'react-icons/go';
 
 
 export const TopNav = () => {
@@ -102,7 +102,7 @@ export const TopNav = () => {
                                     <div>
                                         <p className='text-[13px] font-medium flex items-center gap-x-[5px]'>
                                             Michael
-                                            <GoPrimitiveDot className='text-[8px]' />
+                                            {/* <GoPrimitiveDot className='text-[8px]' /> */}
                                             e-shop
                                         </p>
                                         <p className='text-[10px]'>

@@ -8,8 +8,13 @@ import { AiFillEdit } from 'react-icons/ai'
 import { FiPlus } from 'react-icons/fi'
 import useImageUploadStore from '../../Store/Upload/uploadStore'
 import { LuImagePlus } from "react-icons/lu";
+import { useDropzone } from 'react-dropzone';
+import toast from 'react-hot-toast';
+import { ClipLoader } from 'react-spinners'; 
 
 
+
+const MAX_SIZE = 2 * 1024 * 1024; // 2MB in bytes
 const NewCategories = () => {
     const [categoryData, setCategoryData] = useState({})
     const [mainFilterOptions, setMainFilterOptions] = useState([]);
@@ -29,9 +34,10 @@ const NewCategories = () => {
 
     const [subCatFilterForm, setSubCatFilterForm] = useState(-1);
 
-    const { uploadImages, images } = useImageUploadStore();
+    // const { uploadImages, images } = useImageUploadStore();
+    const { images, uploadImages, clearImages, loading  } = useImageUploadStore();
 
-    console.log(images);
+    // console.log(images);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -186,33 +192,50 @@ const NewCategories = () => {
         }
     }
 
-    const handleDrop = async (event) => {
-        const file = event.target.files[0]; // Get the first file from the input element
-        // Send the file to the uploadImages store
-        await uploadImages(file); // Pass the file as an array
+    const onDrop = (acceptedFiles) => {
+        if (acceptedFiles.length + images.length > 3) {
+            toast.error('You can only upload up to 3 images.');
+            return;
+        }
+
+        const oversizedFiles = acceptedFiles.filter(file => file.size > MAX_SIZE);
+        if (oversizedFiles.length > 0) {
+            toast.error('All files must be 2MB or smaller.');
+            return;
+        }
+        console.log(acceptedFiles);
+        
+
+        uploadImages(acceptedFiles);
     };
-   
-    const categoryImages = [];
-    images.forEach((i) => {
-        categoryImages.push({
-            public_id: i.public_id,
-            url: i.url,
-        });
-    });
+    // const categoryImages = [];
+    // images.forEach((i) => {
+    //     categoryImages.push({
+    //         public_id: i.public_id,
+    //         url: i.url,
+    //     });
+    // });
 
     const handleSaveCategory = (e) => {
         e.preventDefault();
         const newCategory = {
             ...categoryData,
-            images: categoryImages,
+            images: [{
+                public_id: images.map((i) => i.public_id),
+                url: images.map((i) => i.url),
+            }],
             subCategories,
             filterOptions: mainFilterOptions
         }
+
+        clearImages();
 
         console.log(newCategory);
     }
 
     // console.log(mainFilterOptions);
+    const { getRootProps, getInputProps } = useDropzone({ onDrop });
+
 
     return (
         <div className="">
@@ -253,27 +276,31 @@ const NewCategories = () => {
                                     <h3 className='text-[13px] font-medium mb-[10px]'>
                                         Category Images
                                     </h3>
-                                    <div className="bg-zinc-100 rounded-[5px] border-[1px] border-dashed border-zinc-600 flex flex-col p-[10px] items-center justify-center gap-[10px]">
-                                        <div className="grid grid-cols-3 gap-[5px] h-[8rem]">
-                                            {/* {images.map((file, index) => (
-                                                <div key={index} className="border-[1px] border-dashed border-zinc-600 rounded-[5px]">
+                                    <div className="bg-zinc-100 rounded-[5px] border-[1px] border-dashed border-zinc-600 flex flex-col p-[10px] items-center justify-center gap-[10px] h-[10rem] relative">
+                                        <div className="grid grid-cols-3 gap-[5px] h-full">
+                                            {images && images?.map((file, index) => (
+                                                <div key={index} className="border-[1px] border-dashed border-zinc-600 rounded-[5px] h-full">
                                                     <img src={file.url} alt={`Image ${index + 1}`} className="w-full h-full object-cover" />
                                                 </div>
-                                            ))} */}
+                                            ))}
+                                            {}
                                         </div>
-                                        <div className="">
-                                            <label htmlFor="categoryImage" className='text-[11px] py-[5px] px-[10px] border-[1px] border-zinc-500 rounded-[5px]'>
-                                                <LuImagePlus />
-                                                select image
-                                                <input
-                                                    type="file"
-                                                    id="categoryImage"
-                                                    name="categoryImage"
-                                                    className="hidden"
-                                                    onChange={handleDrop}
-                                                    accept="image/*"
-                                                />
-                                            </label>
+                                        <div className={` flex items-center justify-center w-full ${images.length > 0 || images.length === 2 ? 'static' : 'absolute h-[10rem]'}`}>
+                                            {images.length < 3 ? (
+                                                <div {...getRootProps()} className="w-full h-full flex items-center text-center justify-center">
+                                                    <input {...getInputProps()} />
+                                                    <p className={`w-full h-full text-[11px] flex items-center justify-center gap-x-[5px] rounded-[5px] cursor-pointer`}>
+                                                        <LuImagePlus />
+                                                        Drop n drop some images here
+                                                    </p>
+                                                </div>
+                                            ) : loading ? (
+                                                <div className="">
+                                                    <ClipLoader size={30} color={"#123abc"} loading={true} />
+                                                    <p className='text-[12px] mt-2'>Uploading images, please wait...</p>
+                                                </div>
+                                                
+                                            ) : (null)}
                                         </div>
                                     </div>
                                 </div>
